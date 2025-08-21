@@ -1,0 +1,159 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    background-color: #08D9D6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+h1{
+    color: #252A34;
+}
+
+main{
+    height: 100vh;
+    width: 100vw;
+   
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.container{
+    height: 50vmin;
+    width: 50vmin;
+    
+    border-radius: 1rem;
+    
+    
+}
+
+.cells-box{
+    height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    gap: 1rem;
+}
+
+.reset-game{
+    grid-column: 2/3;
+    grid-row: 3/4;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#reset-btn{
+    height: 3rem;
+    width: 7rem;
+    border: none;
+    border-radius: 1rem;
+    background-color: #252A34;
+    color: #EAEAEA;
+    font-size: 1rem;
+    box-shadow: 0 0 5px #EAEAEA, inset 0 0 5px #EAEAEA;
+}
+#reset-btn:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 10px #EAEAEA, 0 0 10px #EAEAEA;
+    transition: box-shadow 0.3s ease-in;
+}
+
+.cell{
+    
+    border: none;
+    border-radius: 1rem;
+    background-color: #FF2E63;
+    color: #EAEAEA;
+    font-size: clamp(0.5rem, 6vmin, 5rem);
+
+    box-shadow: 0 0 2px #252A34, inset 0 0 4px #252A34;
+    
+}
+.cell:hover{
+    cursor: pointer;
+    box-shadow: 0 0 15px #252A34, inset 0 0 20px #252A34;
+    transition: box-shadow 0.3s ease-in;
+}
+
+.show-winner{
+    height: 50vmin;
+    width: 50vmin;
+}
+
+#new-btn{
+    height: 40px;
+    width: 115px;
+    border: none;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    background-color: #1B2430;
+    color: #D6D5A8;
+    font-size: 1rem;
+    box-shadow: 0 0 10px #EAEAEA , inset 0 0 5px #EAEAEA;
+}
+#new-btn:hover{
+    cursor: pointer;
+    box-shadow: inset 0 0 10px #EAEAEA, 0 0 10px #EAEAEA;
+    transition: box-shadow 0.3s ease-in;
+}
+
+
+.hide{
+    display: none;
+}
+
+
+@media(max-width: 480px){
+    .cells-box{
+        gap: 0.2rem;
+        margin: 1rem 0 1rem 0;
+    }
+
+    .cell{
+        font-size: small;
+    }
+
+    main{
+        height: 70vh;
+        width: 80vw;
+         display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+       
+    }
+
+    h1{
+        font-size: large;
+    }
+
+    #reset-btn{
+        height: 1.2rem;
+        width: auto;
+        font-size: 0.6rem;
+    }
+
+    #new-btn{
+        height: 1.2rem;
+        width: auto;
+        font-size: 0.6rem;
+    }
+
+    .hide{
+        display: none;
+    }
+}
+
